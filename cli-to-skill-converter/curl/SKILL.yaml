@@ -1,0 +1,18 @@
+author: cli-to-skill-converter
+capabilities:
+- cli
+- automation
+commands:
+- description: 'Usage: curl [options...] <url>'
+  handler: shell:curl
+  name: curl
+  usage: curl --data --fail --include
+dependencies:
+  command: curl
+description: 'Usage: curl [options...] <url>'
+name: Curl
+tags:
+- cli
+- converted
+- automation
+version: 0.1.0

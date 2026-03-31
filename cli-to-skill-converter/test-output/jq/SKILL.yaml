@@ -1,0 +1,18 @@
+author: cli-to-skill-converter
+capabilities:
+- cli
+- automation
+commands:
+- description: jq - commandline JSON processor [version 1.7.1-apple]
+  handler: shell:jq
+  name: jq
+  usage: jq --apple --args --jsonargs
+dependencies:
+  command: jq
+description: jq - commandline JSON processor [version 1.7.1-apple]
+name: Jq
+tags:
+- cli
+- converted
+- automation
+version: 0.1.0

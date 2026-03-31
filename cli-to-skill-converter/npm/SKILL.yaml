@@ -1,0 +1,18 @@
+author: cli-to-skill-converter
+capabilities:
+- cli
+- automation
+commands:
+- description: npm <command>
+  handler: shell:npm
+  name: npm
+  usage: 'npm '
+dependencies:
+  command: npm
+description: npm <command>
+name: Npm
+tags:
+- cli
+- converted
+- automation
+version: 0.1.0

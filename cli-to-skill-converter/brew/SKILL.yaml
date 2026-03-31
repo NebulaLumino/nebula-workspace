@@ -1,0 +1,18 @@
+author: cli-to-skill-converter
+capabilities:
+- cli
+- automation
+commands:
+- description: 'Example usage:'
+  handler: shell:brew
+  name: brew
+  usage: brew --no-fetch
+dependencies:
+  command: brew
+description: 'Example usage:'
+name: Brew
+tags:
+- cli
+- converted
+- automation
+version: 0.1.0

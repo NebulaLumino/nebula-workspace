@@ -1,0 +1,62 @@
+# single-file-memory-skill/skill.yaml
+name: "Single-File Agent Memory"
+description: "Zero-infrastructure, ultra-low-latency memory for AI agents using memvid-core"
+version: "0.1.0"
+author: "NebulaLumino"
+license: "Apache-2.0"
+
+capabilities:
+  - memory
+  - storage
+  - search
+
+commands:
+  - name: "memvid create"
+    description: "Create a new single-file memory"
+    usage: "memvid create <filename>"
+    handler: "python3 python/memvid_skill.py create"
+
+  - name: "memvid put"
+    description: "Add content to memory"
+    usage: "memvid put <filename> --input <file>"
+    handler: "python3 python/memvid_skill.py put"
+
+  - name: "memvid find"
+    description: "Search memory for content"
+    usage: "memvid find <filename> --query <text>"
+    handler: "python3 python/memvid_skill.py find"
+
+  - name: "memvid ask"
+    description: "Ask questions about memory"
+    usage: "memvid ask <filename> --query <question>"
+    handler: "python3 python/memvid_skill.py ask"
+
+  - name: "memvid stats"
+    description: "Show memory statistics"
+    usage: "memvid stats <filename>"
+    handler: "python3 python/memvid_skill.py stats"
+
+  - name: "memvid timeline"
+    description: "View memory timeline"
+    usage: "memvid timeline <filename>"
+    handler: "python3 python/memvid_skill.py timeline"
+
+dependencies:
+  - cargo: ">=1.94"
+  - memvid-cli: ">=2.0.139"
+  - python: ">=3.8"
+
+examples:
+  - "memvid create agent-memory.mv2"
+  - "memvid put agent-memory.mv2 --input ./docs/README.md --title 'README'"
+  - "memvid find agent-memory.mv2 --query 'weather'"
+  - "memvid ask agent-memory.mv2 --query 'What is this project about?'"
+  - "memvid stats agent-memory.mv2"
+  - "memvid timeline agent-memory.mv2"
+
+tags:
+  - agent
+  - memory
+  - rag
+  - infrastructure
+  - performance

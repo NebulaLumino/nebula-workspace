@@ -1,0 +1,18 @@
+author: cli-to-skill-converter
+capabilities:
+- cli
+- automation
+commands:
+- description: 'usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]'
+  handler: shell:git
+  name: git
+  usage: 'git '
+dependencies:
+  command: git
+description: 'usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]'
+name: Git
+tags:
+- cli
+- converted
+- automation
+version: 0.1.0

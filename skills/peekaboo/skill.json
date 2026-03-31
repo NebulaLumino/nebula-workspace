@@ -1,0 +1,40 @@
+{
+  "name": "peekaboo",
+  "description": "macOS UI automation - capture screens, click elements, navigate, take screenshots",
+  "version": "1.0.0",
+  "metadata": {
+    "openclaw": {
+      "emoji": "👀",
+      "os": ["darwin"],
+      "requires": {
+        "bins": ["peekaboo"]
+      },
+      "install": [
+        {
+          "id": "brew",
+          "kind": "brew",
+          "formula": "steipete/tap/peekaboo",
+          "bins": ["peekaboo"],
+          "label": "Install Peekaboo (brew)"
+        }
+      ],
+      "permissions": [
+        {
+          "type": "screen-recording",
+          "label": "Screen Recording",
+          "description": "Required for capturing screens and inspecting UI elements"
+        },
+        {
+          "type": "accessibility",
+          "label": "Accessibility",
+          "description": "Required for clicking, typing, and interacting with UI elements"
+        }
+      ],
+      "setup": {
+        "checkPermissions": "peekaboo permissions",
+        "autoGrant": false,
+        "note": "User must manually grant permissions in System Settings > Privacy & Security"
+      }
+    }
+  }
+}

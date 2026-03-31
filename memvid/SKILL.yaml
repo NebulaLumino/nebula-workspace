@@ -1,0 +1,18 @@
+author: cli-to-skill-converter
+capabilities:
+- cli
+- automation
+commands:
+- description: Memvid single-file memory CLI
+  handler: shell:memvid
+  name: memvid
+  usage: memvid --file --many --computed
+dependencies:
+  command: memvid
+description: Memvid single-file memory CLI
+name: Memvid
+tags:
+- cli
+- converted
+- automation
+version: 0.1.0

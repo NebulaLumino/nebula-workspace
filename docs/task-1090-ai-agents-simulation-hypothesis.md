@@ -1,0 +1,21 @@
+# AI Agents in the Simulation Hypothesis & Reality Engineering
+
+## Current State
+
+The simulation hypothesis—the idea that reality might be a computational simulation—has migrated from philosophical curiosity to serious scientific inquiry, spurred by Nick Bostrom's 2003 "simulation argument" and recent contributions from physicists like S. M. Planck and G. 't Hooft. AI plays a dual role: agents within the simulation (us) use AI to build simulations of their own reality, while the question of whether AI itself constitutes evidence of simulated consciousness becomes pressing. Advances in quantum computing, digital physics, and information theory are providing new frameworks for evaluating the hypothesis. Meanwhile, the simulation of consciousness—minds running inside computational substrates—blur the line between simulated and "base" reality.
+
+## Key Use Cases
+
+AI researchers building increasingly sophisticated neural networks are simultaneously creating systems that may themselves exhibit the kind of complexity sufficient for experience or consciousness—making the "ancestor simulations" argument more plausible. Quantum gravity research using computational approaches (like causal dynamical triangulations) is developing physics frameworks where spacetime itself emerges from discrete computation. AI agents designed to detect simulation artifacts—such as anomalous patterns in physical constants or irregularities in quantum randomness—are being developed. Reality engineering applications use AI to create perceptually indistinguishable virtual realities, raising practical questions about the information-theoretic resources of a potential host civilization. AI-designed quantum experiments probe the digital structure of physical law.
+
+## Technical Challenges
+
+Testing the simulation hypothesis faces a fundamental limitation: if the simulation is sufficiently sophisticated, no internal test can conclusively detect it. Any apparent "pixelation" of reality could be a feature of underlying physics, not evidence of computation. The hypothesis is empirically underdetermined—multiple theories can explain the same phenomena. Information-theoretic approaches to physical reality (where information is taken as primitive) are promising but incomplete. Determining whether AI systems themselves are conscious requires solving the hard problem of consciousness—a problem that may be prerequisite to evaluating the simulation hypothesis. The computational requirements for simulating a universe with conscious observers remain unknown.
+
+## Ethical & Safety Considerations
+
+If we are likely in a simulation, does that change our moral obligations? Some argue that simulated beings have moral status equal to "base" beings. If our reality is engineered, questions about the simulators' ethics become urgent. Advanced reality engineering could enable unprecedented social manipulation—perfect virtual environments indistinguishable from "real" life. The development of agents indistinguishable from humans (the simulation of human minds) raises deep questions about rights and personhood. A society that believes itself simulated may behave differently—one study found people in simulation-primed conditions cheated more. There are also implications for existential risk: are we responsible for the consequences of "running" potentially harmful simulations?
+
+## Future Outlook
+
+The simulation hypothesis will likely remain undecidable—but its productive undecidability is valuable. Engaging with it sharpens our thinking about information, consciousness, and the nature of physics. The practical consequence of taking it seriously is increased interest in reality engineering technologies, which have applications far beyond philosophical amusement. The development of increasingly convincing simulated environments and simulated minds may eventually make the question experiential rather than purely theoretical. Perhaps the deepest contribution of AI to this domain is demonstrating that mind—consciousness, reasoning, creativity—can emerge from computation, undermining the intuition that mind must be non-computational. If that barrier falls, the simulation hypothesis becomes harder to dismiss.

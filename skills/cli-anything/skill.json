@@ -1,0 +1,42 @@
+{
+  "name": "cli-anything",
+  "description": "Auto-generate CLIs for any software - Build, refine, test, and validate CLI harnesses",
+  "version": "0.1.0",
+  "author": "HKUDS Community",
+  "capabilities": ["code-generation", "cli", "automation", "software-analysis"],
+  "tags": ["cli", "code-generation", "automation", "harness"],
+  "commands": [
+    {
+      "name": "build",
+      "description": "Build a new CLI harness for software",
+      "usage": "Analyze and build CLI for target software",
+      "handler": "agent"
+    },
+    {
+      "name": "refine",
+      "description": "Refine existing CLI harness",
+      "usage": "Expand capabilities of existing harness",
+      "handler": "agent"
+    },
+    {
+      "name": "test",
+      "description": "Test the CLI harness",
+      "usage": "Run unit and E2E tests",
+      "handler": "agent"
+    },
+    {
+      "name": "validate",
+      "description": "Validate CLI harness quality",
+      "usage": "Check harness follows best practices",
+      "handler": "agent"
+    }
+  ],
+  "dependencies": {
+    "python": "3.10+",
+    "pip": "click"
+  },
+  "reference": {
+    "harness": "~/CLI-Anything/cli-anything-plugin/HARNESS.md",
+    "examples": "~/CLI-Anything/"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "vercel",
+  "description": "Deploy and manage Vercel projects from OpenClaw",
+  "version": "0.1.0",
+  "author": "Nova",
+  "capabilities": ["deployment", "cloud", "devops"],
+  "tags": ["vercel", "deployment", "serverless", "frontend"],
+  "commands": [
+    {
+      "name": "deploy",
+      "description": "Deploy project to Vercel",
+      "usage": "vercel deploy [path] [--prod] [--yes]",
+      "handler": "shell:vercel"
+    },
+    {
+      "name": "list",
+      "description": "List deployments",
+      "usage": "vercel ls [app]",
+      "handler": "shell:vercel"
+    },
+    {
+      "name": "logs",
+      "description": "View deployment logs",
+      "usage": "vercel logs <url-or-id>",
+      "handler": "shell:vercel"
+    },
+    {
+      "name": "env",
+      "description": "Manage environment variables",
+      "usage": "vercel env add|ls|rm <name>",
+      "handler": "shell:vercel"
+    },
+    {
+      "name": "link",
+      "description": "Link to Vercel project",
+      "usage": "vercel link",
+      "handler": "shell:vercel"
+    },
+    {
+      "name": "login",
+      "description": "Log into Vercel",
+      "usage": "vercel login [email]",
+      "handler": "shell:vercel"
+    },
+    {
+      "name": "whoami",
+      "description": "Check logged in user",
+      "usage": "vercel whoami",
+      "handler": "shell:vercel"
+    }
+  ],
+  "dependencies": {
+    "cli": "vercel",
+    "npm": "vercel"
+  }
+}

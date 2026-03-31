@@ -1,0 +1,13 @@
+[package]
+name = "single-file-memory-skill"
+version = "0.1.0"
+edition = "2021"
+description = "Single-file agent memory skill for AI agents using memvid-core"
+license = "Apache-2.0"
+repository = "https://github.com/NebulaLumino/single-file-memory-skill"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+memvid-core = "2.0.139"
