@@ -1,0 +1,29 @@
+"use client"; import { useState } from "react";
+function md(t:string){return t.split("\n").map((l,i)=>{const x=l.trim();if(x.startsWith("## "))return<h2 key={i} className="text-xl font-bold text-white mt-7 mb-3">{x.replace("## ","")}</h2>;if(x.startsWith("**"))return<p key={i} className="text-amber-200 font-semibold text-xs mt-2">{x.replace(/\*\*/g,"")}</p>;if(x.startsWith("- "))return<li key={i} className="text-slate-300 text-xs ml-4 mb-0.5 list-disc">{x.replace("- ","")}</li>;if(x==="")return<div key={i} className="h-1.5"/>;return<p key={i} className="text-slate-300 text-xs mb-0.5">{x}</p>;});}
+export default function Home() {
+  const [f,setF]=useState({company:"",industry:"",techStack:"",employees:"",dataTypes:"",regulations:""});
+  const [r,setR]=useState("");const[l,setL]=useState(false);const[err,setErr]=useState("");
+  const gen=async()=>{if(!f.company.trim()){setErr("Required.");return;}setL(true);setErr("");setR("");
+    try{const res=await fetch("/api/generate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(f)});const d=await res.json();if(!res.ok){setErr(d.error);return;}setR(d.result);}catch{setErr("Failed.");}finally{setL(false);}};
+  return(
+    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-red-950">
+      <header className="border-b border-white/10 bg-slate-950/80 backdrop-blur sticky top-0 z-10"><div className="max-w-4xl mx-auto px-6 py-5 flex items-center gap-3"><span className="text-3xl">🔒</span><div><h1 className="text-xl font-bold text-white">AI Security Risk Assessment</h1><p className="text-xs text-slate-400">Security · Risk · DeepSeek</p></div></div></header>
+      <div className="max-w-4xl mx-auto px-6 py-10 space-y-6">
+        <div className="text-center"><h2 className="text-3xl font-extrabold text-white">Identify Your Security Risks Before Attackers Do 🔒</h2><p className="text-slate-400 text-sm max-w-md mx-auto mt-1">Security risk register, threat model, incident response plan, and compliance roadmap.</p></div>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div><label className="text-white font-semibold text-sm block mb-2">🏢 Company *</label><input value={f.company} onChange={e=>setF({...f,company:e.target.value})} placeholder="e.g. NovaTask Inc." className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-400"/></div>
+            <div><label className="text-white font-semibold text-sm block mb-2">🏭 Industry</label><input value={f.industry} onChange={e=>setF({...f,industry:e.target.value})} placeholder="e.g. SaaS, Healthcare, Finance" className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-400"/></div>
+            <div><label className="text-white font-semibold text-sm block mb-2">💻 Tech Stack</label><input value={f.techStack} onChange={e=>setF({...f,techStack:e.target.value})} placeholder="e.g. AWS, React, Node.js, PostgreSQL" className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-400"/></div>
+            <div><label className="text-white font-semibold text-sm block mb-2">👥 Employees</label><input value={f.employees} onChange={e=>setF({...f,employees:e.target.value})} placeholder="e.g. 50 employees" className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-400"/></div>
+            <div className="md:col-span-2"><label className="text-white font-semibold text-sm block mb-2">🗂️ Data Types</label><input value={f.dataTypes} onChange={e=>setF({...f,dataTypes:e.target.value})} placeholder="e.g. Customer PII, payment data, health records" className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-400"/></div>
+            <div className="md:col-span-2"><label className="text-white font-semibold text-sm block mb-2">📜 Regulations</label><input value={f.regulations} onChange={e=>setF({...f,regulations:e.target.value})} placeholder="e.g. SOC 2, GDPR, HIPAA, PCI DSS" className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-400"/></div>
+          </div>
+          <button onClick={gen} disabled={l} className="w-full py-4 rounded-xl bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 disabled:opacity-50 text-white font-bold text-sm flex items-center justify-center gap-2">{l?<><span className="animate-spin text-xl">⚙️</span> Analyzing...</>:<><span>🔒</span> Generate Risk Assessment</>}</button>
+        </div>
+        {err&&<div className="bg-red-500/20 border border-red-500/40 rounded-xl px-5 py-3 text-red-300 text-sm">{err}</div>}
+        {r&&(<div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden"><div className="flex items-center justify-between px-5 py-4 bg-red-500/10 border-b border-red-500/20"><div className="flex items-center gap-3"><span className="text-2xl">🔒</span><p className="text-red-300 font-bold text-sm">Security Risk Assessment: {f.company}</p></div><button onClick={()=>navigator.clipboard?.writeText(r)} className="px-3 py-1.5 rounded-lg bg-white/10 text-slate-300 text-xs">📋 Copy</button></div><div className="px-6 py-5">{md(r)}</div></div>)}
+        <p className="text-center text-xs text-slate-600">AI Security Risk Assessment · {new Date().getFullYear()} · DeepSeek</p>
+      </div>
+    </main>);
+}

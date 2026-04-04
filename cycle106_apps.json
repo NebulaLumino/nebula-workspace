@@ -1,0 +1,180 @@
+[
+  {
+    "name": "ai-capsule-wardrobe",
+    "color": "violet",
+    "title": "AI Capsule Wardrobe Generator",
+    "description": "Generate personalized capsule wardrobes with outfit combinations",
+    "domain": "capsule wardrobe and personal style",
+    "fields": [
+      {"type": "select", "name": "bodyType", "label": "Body Type", "placeholder": "", "options": [{"value": "hourglass", "label": "Hourglass"}, {"value": "pear", "label": "Pear"}, {"value": "apple", "label": "Apple"}, {"value": "rectangle", "label": "Rectangle"}, {"value": "inverted-triangle", "label": "Inverted Triangle"}]},
+      {"type": "select", "name": "skinTone", "label": "Skin Tone", "options": [{"value": "fair", "label": "Fair"}, {"value": "light", "label": "Light"}, {"value": "medium", "label": "Medium"}, {"value": "tan", "label": "Tan"}, {"value": "dark", "label": "Dark"}]},
+      {"type": "select", "name": "lifestyle", "label": "Lifestyle", "options": [{"value": "office", "label": "Office / Corporate"}, {"value": "creative", "label": "Creative / Artistic"}, {"value": "active", "label": "Active / Athletic"}, {"value": "social", "label": "Social / Events"}, {"value": "casual", "label": "Casual / Relaxed"}]},
+      {"type": "select", "name": "dressCode", "label": "Work Dress Code", "options": [{"value": "formal", "label": "Formal Business"}, {"value": "business-casual", "label": "Business Casual"}, {"value": "smart-casual", "label": "Smart Casual"}, {"value": "casual", "label": "Casual"}, {"value": "none", "label": "No Dress Code"}]},
+      {"type": "input", "name": "budget", "label": "Budget for new pieces", "placeholder": "e.g. $500"},
+      {"type": "textarea", "name": "closet", "label": "Closet audit results", "placeholder": "List current essential pieces you own"},
+      {"type": "textarea", "name": "inspiration", "label": "Style inspiration", "placeholder": "e.g. minimalist, French, boho"},
+      {"type": "select", "name": "climate", "label": "Climate", "options": [{"value": "cold", "label": "Cold / Winter"}, {"value": "temperate", "label": "Temperate / All Seasons"}, {"value": "warm", "label": "Warm / Summer"}, {"value": "humid", "label": "Humid / Tropical"}, {"value": "dry", "label": "Dry / Arid"}]}
+    ],
+    "prompt_keys": ["bodyType", "skinTone", "lifestyle", "dressCode", "budget", "closet", "inspiration", "climate"],
+    "prompt": "You are an expert personal stylist and capsule wardrobe consultant. Based on the following user profile, create a comprehensive, well-structured capsule wardrobe plan.\n\n{fields}\n\nPlease provide:\n1. Essential Pieces List (with specific garment descriptions)\n2. Color Palette (specific colors that complement their skin tone)\n3. Outfit Combinations (at least 10 mix-and-match outfits)\n4. Shopping List (prioritized by importance)\n5. Cost Breakdown (estimated total)\n6. Seasonal Rotation Plan\n7. Styling Tips for their body type\n\nFormat everything in clean markdown with headers, bullet points, and organized sections."
+  },
+  {
+    "name": "ai-skincare-routine",
+    "color": "blue",
+    "title": "AI Skincare Routine Generator",
+    "description": "Generate personalized skincare and beauty routines",
+    "domain": "skincare and beauty regimen",
+    "fields": [
+      {"type": "select", "name": "skinType", "label": "Skin Type", "options": [{"value": "dry", "label": "Dry"}, {"value": "oily", "label": "Oily"}, {"value": "combination", "label": "Combination"}, {"value": "normal", "label": "Normal"}, {"value": "sensitive", "label": "Sensitive"}]},
+      {"type": "textarea", "name": "concerns", "label": "Primary concerns", "placeholder": "e.g. acne, fine lines, hyperpigmentation"},
+      {"type": "select", "name": "ageRange", "label": "Age Range", "options": [{"value": "under20", "label": "Under 20"}, {"value": "20s", "label": "20s"}, {"value": "30s", "label": "30s"}, {"value": "40s", "label": "40s"}, {"value": "50s", "label": "50s"}, {"value": "60plus", "label": "60+"}]},
+      {"type": "select", "name": "budgetTier", "label": "Budget Tier", "options": [{"value": "drugstore", "label": "Drugstore ($)"}, {"value": "midrange", "label": "Mid-Range ($$)"}, {"value": "luxury", "label": "Luxury ($$$)"}, {"value": "prestige", "label": "Prestige / Medical-Grade ($$$$)"}]},
+      {"type": "textarea", "name": "sensitivities", "label": "Sensitivities / Allergies", "placeholder": "e.g. fragrance-free, niacinamide-sensitive"},
+      {"type": "textarea", "name": "currentProducts", "label": "Current products (AM & PM)", "placeholder": "List current products you use"},
+      {"type": "input", "name": "amTime", "label": "AM time available", "placeholder": "e.g. 10 min"},
+      {"type": "input", "name": "pmTime", "label": "PM time available", "placeholder": "e.g. 15 min"},
+      {"type": "select", "name": "professionalTreatments", "label": "Professional treatments access", "options": [{"value": "none", "label": "None"}, {"value": "dermatologist", "label": "Dermatologist"}, {"value": "esthetician", "label": "Esthetician"}, {"value": "both", "label": "Both"}]}
+    ],
+    "prompt_keys": ["skinType", "concerns", "ageRange", "budgetTier", "sensitivities", "currentProducts", "amTime", "pmTime", "professionalTreatments"],
+    "prompt": "You are an expert esthetician and skincare consultant. Based on the following profile, create a comprehensive, science-based skincare routine.\n\n{fields}\n\nPlease provide:\n1. AM Routine (step-by-step with product types and purpose)\n2. PM Routine (step-by-step with product types and purpose)\n3. Product Category Sequence (in what order to apply products)\n4. Ingredient Recommendations (specific ingredients to look for by concern)\n5. Products to Avoid (ingredients that may worsen their concerns)\n6. Professional Treatment Schedule (suggested frequency and type)\n7. Seasonal Adjustments (summer vs winter routine changes)\n8. Routine Compliance Tips (how to stick with it)\n\nFormat in clean markdown with numbered steps and organized sections."
+  },
+  {
+    "name": "ai-jewelry-collection",
+    "color": "green",
+    "title": "AI Jewelry Collection Curator",
+    "description": "Generate jewelry collection curation and styling reports",
+    "domain": "jewelry curation and styling",
+    "fields": [
+      {"type": "select", "name": "metalPreference", "label": "Metal Preference", "options": [{"value": "yellow-gold", "label": "Yellow Gold"}, {"value": "white-gold", "label": "White Gold"}, {"value": "rose-gold", "label": "Rose Gold"}, {"value": "silver", "label": "Silver / Sterling Silver"}, {"value": "platinum", "label": "Platinum"}, {"value": "mixed", "label": "Mixed Metals"}]},
+      {"type": "select", "name": "gemstonePreference", "label": "Gemstone Preference", "options": [{"value": "diamonds", "label": "Diamonds"}, {"value": "colored-stones", "label": "Colored Stones (sapphire, ruby, emerald)"}, {"value": "pearls", "label": "Pearls"}, {"value": "semi-precious", "label": "Semi-Precious (amethyst, tourmaline, etc.)"}, {"value": "no-preference", "label": "No Gemstone Preference"}]},
+      {"type": "textarea", "name": "existingCollection", "label": "Existing collection", "placeholder": "List pieces you already own"},
+      {"type": "textarea", "name": "occasions", "label": "Occasions to cover", "placeholder": "work, formal events, casual, travel"},
+      {"type": "select", "name": "budgetRange", "label": "Budget Range", "options": [{"value": "entry", "label": "Entry Level ($100-$500)"}, {"value": "midrange", "label": "Mid-Range ($500-$2,000)"}, {"value": "luxury", "label": "Luxury ($2,000-$10,000)"}, {"value": "investment", "label": "Investment Grade ($10,000+)"}]},
+      {"type": "select", "name": "personalStyle", "label": "Personal Style", "options": [{"value": "classic", "label": "Classic / Timeless"}, {"value": "modern", "label": "Modern / Minimalist"}, {"value": "bohemian", "label": "Bohemian / Artistic"}, {"value": "vintage", "label": "Vintage / Antique"}, {"value": "bold", "label": "Bold / Statement"}]},
+      {"type": "textarea", "name": "metalAllergies", "label": "Metal allergies", "placeholder": "e.g. nickel sensitivity"},
+      {"type": "select", "name": "investmentVsFashion", "label": "Investment vs Fashion", "options": [{"value": "investment", "label": "Primarily Investment Pieces"}, {"value": "fashion", "label": "Primarily Fashion Pieces"}, {"value": "balanced", "label": "Balanced Mix"}]}
+    ],
+    "prompt_keys": ["metalPreference", "gemstonePreference", "existingCollection", "occasions", "budgetRange", "personalStyle", "metalAllergies", "investmentVsFashion"],
+    "prompt": "You are an expert jewelry curator and gemologist. Based on the following profile, create a comprehensive jewelry collection curation report.\n\n{fields}\n\nPlease provide:\n1. Collection Gap Analysis (what's missing from their current collection)\n2. Essential Pieces Recommendations (specific pieces they should acquire)\n3. Styling Guide by Outfit Type (how to wear each piece)\n4. Care Instructions (specific to their metals and gemstones)\n5. Insurance Appraisal Checklist (for valuable pieces)\n6. Investment-Grade Stone Notes (if applicable)\n7. Occasion Stacking Guide (how to layer and combine pieces)\n\nFormat in clean markdown with organized sections and specific recommendations."
+  },
+  {
+    "name": "ai-wedding-planner",
+    "color": "amber",
+    "title": "AI Wedding Planner & Vendor Selector",
+    "description": "Generate comprehensive wedding planning timelines and vendor recommendations",
+    "domain": "wedding planning and vendor selection",
+    "fields": [
+      {"type": "input", "name": "guestCount", "label": "Guest count", "placeholder": "Number of guests", "inputType": "number"},
+      {"type": "select", "name": "budgetRange", "label": "Budget Range", "options": [{"value": "intimate", "label": "Intimate ($10K-$25K)"}, {"value": "moderate", "label": "Moderate ($25K-$50K)"}, {"value": "mid-luxury", "label": "Mid-Luxury ($50K-$100K)"}, {"value": "luxury", "label": "Luxury ($100K-$250K)"}, {"value": "ultra-luxury", "label": "Ultra-Luxury ($250K+)"}]},
+      {"type": "select", "name": "weddingStyle", "label": "Wedding Style", "options": [{"value": "classic", "label": "Classic / Traditional"}, {"value": "modern", "label": "Modern / Minimalist"}, {"value": "bohemian", "label": "Bohemian / Garden"}, {"value": "rustic", "label": "Rustic / Country"}, {"value": "beach", "label": "Beach / Destination"}, {"value": "cultural", "label": "Cultural / Traditional"}, {"value": "vintage", "label": "Vintage / Retro"}]},
+      {"type": "select", "name": "season", "label": "Season / Month", "options": [{"value": "spring", "label": "Spring (Mar-May)"}, {"value": "summer", "label": "Summer (Jun-Aug)"}, {"value": "fall", "label": "Fall (Sep-Nov)"}, {"value": "winter", "label": "Winter (Dec-Feb)"}]},
+      {"type": "select", "name": "venuePreference", "label": "Venue Preference", "options": [{"value": "indoor", "label": "Indoor / Ballroom / Hotel"}, {"value": "outdoor", "label": "Outdoor / Garden / Vineyard"}, {"value": "destination", "label": "Destination / Travel"}, {"value": "unique", "label": "Unique Space / Museum / Loft"}, {"value": "religious", "label": "Religious / Church / Temple"}]},
+      {"type": "textarea", "name": "culturalTraditions", "label": "Cultural traditions", "placeholder": "Traditions to incorporate"},
+      {"type": "input", "name": "planningTimeline", "label": "Planning timeline", "placeholder": "e.g. 18 months, 12 months"},
+      {"type": "textarea", "name": "dietary", "label": "Dietary requirements", "placeholder": "vegan, kosher, halal, allergies"}
+    ],
+    "prompt_keys": ["guestCount", "budgetRange", "weddingStyle", "season", "venuePreference", "culturalTraditions", "planningTimeline", "dietary"],
+    "prompt": "You are an expert wedding planner with years of experience. Based on the following wedding details, create a comprehensive wedding planning timeline and vendor selection report.\n\n{fields}\n\nPlease provide:\n1. Month-by-Month Planning Timeline (from now to wedding day)\n2. Vendor Category Checklist (photographer, caterer, florist, DJ, officiant, etc.)\n3. Budget Breakdown by Category (with percentage allocations)\n4. Venue Comparison Criteria (questions to ask each venue)\n5. Key Questions to Ask Each Vendor\n6. Timeline Management Tips\n7. Guest Experience Priorities\n\nFormat in clean markdown with a detailed timeline, checklists, and organized sections."
+  },
+  {
+    "name": "ai-bridesmaid-proposal",
+    "color": "rose",
+    "title": "AI Bridesmaid Proposal & Gift Guide",
+    "description": "Generate bridesmaid proposal ideas and wedding party gift recommendations",
+    "domain": "bridesmaid proposals and wedding party gifting",
+    "fields": [
+      {"type": "input", "name": "partySize", "label": "Bridal party size", "placeholder": "Number of bridesmaids", "inputType": "number"},
+      {"type": "input", "name": "budgetPerGift", "label": "Budget per bridesmaid gift", "placeholder": "e.g. $150"},
+      {"type": "select", "name": "proposalStyle", "label": "Proposal Style", "options": [{"value": "intimate", "label": "Intimate / Private"}, {"value": "group", "label": "Group / Brunch Proposal"}, {"value": "destination", "label": "Destination / Weekend Trip"}, {"value": "creative", "label": "Creative / Artful"}, {"value": "sentimental", "label": "Sentimental / Heirloom"}]},
+      {"type": "textarea", "name": "personalities", "label": "Bridesmaid personalities", "placeholder": "One per line: e.g. Sara - bookworm, loves coffee"},
+      {"type": "textarea", "name": "proposalSetting", "label": "Proposal setting", "placeholder": "Where/when you plan to ask"},
+      {"type": "textarea", "name": "culturalConsiderations", "label": "Cultural considerations", "placeholder": "Any cultural notes"},
+      {"type": "select", "name": "deliveryPreference", "label": "Delivery Preference", "options": [{"value": "in-person", "label": "In-Person"}, {"value": "mail", "label": "Mail / Shipped"}, {"value": "virtual", "label": "Virtual / Video Call"}, {"value": "combined", "label": "Combined (box + in-person)"}]}
+    ],
+    "prompt_keys": ["partySize", "budgetPerGift", "proposalStyle", "personalities", "proposalSetting", "culturalConsiderations", "deliveryPreference"],
+    "prompt": "You are an expert wedding stylist and event planner specializing in bridal party proposals. Based on the following details, create a comprehensive bridesmaid proposal and gift guide.\n\n{fields}\n\nPlease provide:\n1. Proposal Box Contents (specific items to include with costs)\n2. Proposal Wording Options (3-5 different tone variations)\n3. Proposal Display Ideas (how to present it beautifully)\n4. Personalized Gift Suggestions by Personality (tailored to each bridesmaid)\n5. Proposal Budget Breakdown (itemized costs)\n6. Bridesmaid Dress Style Guide (color, style, fabric suggestions)\n7. Bachelorette Party Theme Ideas (by personality type)\n\nFormat in clean markdown with bullet points, specific product recommendations, and editable wording templates."
+  },
+  {
+    "name": "ai-luxury-gift-guide",
+    "color": "teal",
+    "title": "AI Luxury Gift Guide",
+    "description": "Generate luxury travel and experiential gift recommendations",
+    "domain": "luxury gifting and experiential gifts",
+    "fields": [
+      {"type": "select", "name": "relationship", "label": "Relationship to Recipient", "options": [{"value": "self", "label": "Gift for Self"}, {"value": "partner", "label": "Partner / Spouse"}, {"value": "parent", "label": "Parent"}, {"value": "sibling", "label": "Sibling"}, {"value": "friend", "label": "Close Friend"}, {"value": "colleague", "label": "Colleague / Boss"}, {"value": "client", "label": "Client / Business"}]},
+      {"type": "select", "name": "occasionType", "label": "Occasion Type", "options": [{"value": "birthday", "label": "Birthday"}, {"value": "anniversary", "label": "Anniversary"}, {"value": "holiday", "label": "Holiday"}, {"value": "graduation", "label": "Graduation"}, {"value": "wedding", "label": "Wedding"}, {"value": "achievement", "label": "Achievement / Promotion"}, {"value": "just-because", "label": "Just Because"}]},
+      {"type": "select", "name": "budgetRange", "label": "Budget Range", "options": [{"value": "mid", "label": "$100 - $500"}, {"value": "premium", "label": "$500 - $2,000"}, {"value": "luxury", "label": "$2,000 - $10,000"}, {"value": "ultra-luxury", "label": "$10,000+"}]},
+      {"type": "textarea", "name": "recipientInterests", "label": "Recipient interests", "placeholder": "wine, art, adventure, wellness, food, music..."},
+      {"type": "select", "name": "travelStyle", "label": "Travel Style", "options": [{"value": "adventure", "label": "Adventure / Active"}, {"value": "relaxation", "label": "Relaxation / Spa"}, {"value": "cultural", "label": "Cultural / Historical"}, {"value": "culinary", "label": "Culinary / Food-Focused"}, {"value": "nature", "label": "Nature / Wildlife"}, {"value": "city", "label": "City / Urban"}]},
+      {"type": "select", "name": "adventureVsRelaxation", "label": "Adventure vs Relaxation", "options": [{"value": "adventure", "label": "Primarily Adventure"}, {"value": "relaxation", "label": "Primarily Relaxation"}, {"value": "balanced", "label": "Balanced Mix"}]},
+      {"type": "select", "name": "foodWine", "label": "Food & Wine Interest", "options": [{"value": "high", "label": "High Interest / Enthusiast"}, {"value": "moderate", "label": "Moderate Interest"}, {"value": "low", "label": "Low Interest"}]},
+      {"type": "select", "name": "seasonality", "label": "Seasonality", "options": [{"value": "spring", "label": "Spring"}, {"value": "summer", "label": "Summer"}, {"value": "fall", "label": "Fall"}, {"value": "winter", "label": "Winter"}, {"value": "any", "label": "Any Season"}]}
+    ],
+    "prompt_keys": ["relationship", "occasionType", "budgetRange", "recipientInterests", "travelStyle", "adventureVsRelaxation", "foodWine", "seasonality"],
+    "prompt": "You are an expert luxury gift curator and experiential gifting consultant. Based on the following details, create a curated luxury gift guide.\n\n{fields}\n\nPlease provide:\n1. Curated Gift Experience Options Ranked (top 5 with descriptions and price ranges)\n2. Travel Itinerary Suggestions (if applicable)\n3. Exclusive Access Recommendations (hard-to-get experiences)\n4. Personalized Gift Narrative (why each gift is meaningful)\n5. Packaging/Presentation Ideas\n6. Alternative Options (2-3 backup choices)\n7. Timing Tips (when to buy/book)\n\nFormat in clean markdown with ratings, price estimates, and specific vendor recommendations."
+  },
+  {
+    "name": "ai-hair-transformation",
+    "color": "cyan",
+    "title": "AI Hair Transformation Plan",
+    "description": "Generate hair color and style transformation roadmaps",
+    "domain": "hair color and style transformation",
+    "fields": [
+      {"type": "textarea", "name": "currentHair", "label": "Current hair color/type", "placeholder": "e.g. Dark brown, medium length, wavy, previously colored"},
+      {"type": "textarea", "name": "desiredLook", "label": "Desired look", "placeholder": "e.g. Ash blonde balayage, vivid fashion colors, natural highlights"},
+      {"type": "select", "name": "skinTone", "label": "Skin Tone", "options": [{"value": "fair", "label": "Fair"}, {"value": "light", "label": "Light"}, {"value": "medium", "label": "Medium"}, {"value": "tan", "label": "Tan"}, {"value": "dark", "label": "Dark"}]},
+      {"type": "select", "name": "maintenanceTolerance", "label": "Maintenance tolerance", "options": [{"value": "low", "label": "Low (I want it to last)"}, {"value": "moderate", "label": "Moderate (touch-ups every 6-8 weeks OK)"}, {"value": "high", "label": "High (happy with frequent salon visits)"}]},
+      {"type": "select", "name": "budget", "label": "Budget", "options": [{"value": "budget", "label": "Budget ($100-$300/session)"}, {"value": "mid", "label": "Mid-Range ($300-$600/session)"}, {"value": "luxury", "label": "Luxury ($600+/session)"}]},
+      {"type": "select", "name": "lifestyle", "label": "Lifestyle / Activity Level", "options": [{"value": "active", "label": "Active / Works out daily"}, {"value": "normal", "label": "Normal Activity"}, {"value": "sedentary", "label": "Sedentary / Office"}, {"value": "outdoor", "label": "Heavy Outdoor Exposure"}]},
+      {"type": "textarea", "name": "upcomingEvents", "label": "Upcoming events", "placeholder": "e.g. wedding in 3 months, job interview next month"},
+      {"type": "textarea", "name": "colorHistory", "label": "Previous color history", "placeholder": "e.g. Highlights in 2023, bleached in 2024, box dye used"}
+    ],
+    "prompt_keys": ["currentHair", "desiredLook", "skinTone", "maintenanceTolerance", "budget", "lifestyle", "upcomingEvents", "colorHistory"],
+    "prompt": "You are an expert colorist and hair stylist. Based on the following transformation details, create a comprehensive hair transformation roadmap.\n\n{fields}\n\nPlease provide:\n1. Color Transformation Roadmap (step-by-step process over months)\n2. Technique Recommendations (balayage, foil highlights, semi-permanent, etc.)\n3. Style Options that Complement Face Shape (with specific cut/style suggestions)\n4. Maintenance Schedule (at-home and salon appointments)\n5. Product Recommendations (sulfate-free shampoo, purple shampoo, etc.)\n6. Stylist Consultation Questions (exactly what to ask at the salon)\n7. Realistic Timeline (how long each stage takes)\n\nFormat in clean markdown with a timeline table, product recommendations, and specific advice."
+  },
+  {
+    "name": "ai-fragrance-curation",
+    "color": "orange",
+    "title": "AI Fragrance Curation Report",
+    "description": "Generate personalized fragrance recommendations and collection curation",
+    "domain": "fragrance curation and perfume expertise",
+    "fields": [
+      {"type": "select", "name": "fragranceFamily", "label": "Fragrance Family Preference", "options": [{"value": "floral", "label": "Floral"}, {"value": "woody", "label": "Woody"}, {"value": "fresh", "label": "Fresh / Citrus"}, {"value": "spicy", "label": "Spicy / Oriental"}, {"value": "gourmand", "label": "Gourmand"}, {"value": "fruity", "label": "Fruity"}, {"value": "green", "label": "Green / Aromatic"}, {"value": "unsure", "label": "Not sure / Open to all"}]},
+      {"type": "textarea", "name": "notesPreferred", "label": "Notes preferred", "placeholder": "e.g. rose, sandalwood, bergamot, vanilla, oud"},
+      {"type": "textarea", "name": "occasions", "label": "Occasions to wear for", "placeholder": "e.g. office, date night, formal events, daily wear, summer"},
+      {"type": "textarea", "name": "skinChemistry", "label": "Skin chemistry notes", "placeholder": "Note how perfume reacts on your skin"},
+      {"type": "textarea", "name": "existingCollection", "label": "Existing collection", "placeholder": "List perfumes you currently own"},
+      {"type": "select", "name": "budget", "label": "Budget", "options": [{"value": "drugstore", "label": "Drugstore ($30-$80)"}, {"value": "midrange", "label": "Mid-Range ($80-$200)"}, {"value": "niche", "label": "Niche / Designer ($200-$500)"}, {"value": "ultra-luxury", "label": "Ultra-Luxury ($500+)"}]},
+      {"type": "textarea", "name": "allergySensitivities", "label": "Allergy sensitivities", "placeholder": "e.g. sensitive skin, asthma, avoid musk"},
+      {"type": "select", "name": "luxuryVsNiche", "label": "Luxury vs Niche Preference", "options": [{"value": "luxury", "label": "Luxury / Designer Brands"}, {"value": "niche", "label": "Niche / Independent Houses"}, {"value": "both", "label": "Both equally"}]}
+    ],
+    "prompt_keys": ["fragranceFamily", "notesPreferred", "occasions", "skinChemistry", "existingCollection", "budget", "allergySensitivities", "luxuryVsNiche"],
+    "prompt": "You are an expert perfumer and fragrance curator. Based on the following profile, create a comprehensive fragrance wardrobe and curation report.\n\n{fields}\n\nPlease provide:\n1. Fragrance Recommendations by Occasion (specific perfumes with notes and why they work)\n2. Layering Suggestions (which fragrances to layer and how)\n3. Notes Breakdown by Season (spring, summer, fall, winter recommendations)\n4. Perfumer/House Recommendations (specific brands and their signature styles)\n5. Fragrance Wardrobe by Season (minimum viable fragrance wardrobe)\n6. Application Technique Guide (where to spray, how much, pulse points, etc.)\n7. Bottle Size Recommendations (for each occasion)\n\nFormat in clean markdown with specific perfume names, notes, and price ranges."
+  },
+  {
+    "name": "ai-makeup-tutorial",
+    "color": "pink",
+    "title": "AI Makeup Tutorial Generator",
+    "description": "Generate step-by-step makeup looks and tutorial guides",
+    "domain": "makeup artistry and beauty tutorials",
+    "fields": [
+      {"type": "select", "name": "occasion", "label": "Occasion", "options": [{"value": "everyday", "label": "Everyday / No Makeup Makeup"}, {"value": "work", "label": "Work / Office Look"}, {"value": "date", "label": "Date Night"}, {"value": "party", "label": "Party / Night Out"}, {"value": "wedding", "label": "Wedding / Formal"}, {"value": "special", "label": "Special Event / Gala"}, {"value": "photoshoot", "label": "Photoshoot / Photography"}]},
+      {"type": "select", "name": "skinType", "label": "Skin Type", "options": [{"value": "dry", "label": "Dry"}, {"value": "oily", "label": "Oily"}, {"value": "combination", "label": "Combination"}, {"value": "normal", "label": "Normal"}, {"value": "sensitive", "label": "Sensitive"}]},
+      {"type": "select", "name": "skinTone", "label": "Skin Tone", "options": [{"value": "fair", "label": "Fair (Porcelain, Light)"}, {"value": "light", "label": "Light (Beige, Light Tan)"}, {"value": "medium", "label": "Medium (Tan, Olive)"}, {"value": "tan", "label": "Tan (Caramel, Golden)"}, {"value": "dark", "label": "Dark (Espresso, Deep)"}]},
+      {"type": "select", "name": "eyeColor", "label": "Eye Color", "options": [{"value": "brown", "label": "Brown"}, {"value": "blue", "label": "Blue"}, {"value": "green", "label": "Green"}, {"value": "hazel", "label": "Hazel"}, {"value": "gray", "label": "Gray"}, {"value": "dark", "label": "Dark / Black"}]},
+      {"type": "select", "name": "faceShape", "label": "Face Shape", "options": [{"value": "oval", "label": "Oval"}, {"value": "round", "label": "Round"}, {"value": "square", "label": "Square"}, {"value": "heart", "label": "Heart"}, {"value": "oblong", "label": "Oblong / Long"}, {"value": "diamond", "label": "Diamond"}]},
+      {"type": "select", "name": "skillLevel", "label": "Skill Level", "options": [{"value": "beginner", "label": "Beginner (under 1 year)"}, {"value": "intermediate", "label": "Intermediate (1-3 years)"}, {"value": "advanced", "label": "Advanced (3+ years)"}]},
+      {"type": "input", "name": "timeAvailable", "label": "Time available", "placeholder": "e.g. 15 min, 30 min, 1 hour"},
+      {"type": "select", "name": "budgetTier", "label": "Budget Tier", "options": [{"value": "drugstore", "label": "Drugstore Only ($)"}, {"value": "midrange", "label": "Mid-Range ($$)"}, {"value": "luxury", "label": "Luxury ($$$)"}, {"value": "mix", "label": "Mix of all tiers"}]},
+      {"type": "select", "name": "season", "label": "Seasonal Preference", "options": [{"value": "spring", "label": "Spring / Summer (Lighter)"}, {"value": "fall", "label": "Fall / Winter (Deeper)"}, {"value": "year-round", "label": "Year-Round"}]},
+      {"type": "textarea", "name": "skinConcerns", "label": "Skin concerns to address", "placeholder": "e.g. acne scars, redness, dark circles, large pores"}
+    ],
+    "prompt_keys": ["occasion", "skinType", "skinTone", "eyeColor", "faceShape", "skillLevel", "timeAvailable", "budgetTier", "season", "skinConcerns"],
+    "prompt": "You are an expert makeup artist and beauty educator. Based on the following profile, create a comprehensive step-by-step makeup tutorial.\n\n{fields}\n\nPlease provide:\n1. Step-by-Step Tutorial (numbered steps with specific techniques)\n2. Product Recommendations by Category (foundation, primer, concealer, etc.)\n3. Color Palette Guide (specific shades for their skin tone and eye color)\n4. Brush/Technique Tips (which brushes to use for each step)\n5. Look Variations by Skill Level (simplified for beginners, enhanced for advanced)\n6. Product Substitution Options (drugstore alternatives for every step)\n7. Setting and Touch-Up Tips (how to make it last all day)\n\nFormat in clean markdown with numbered steps, specific product names with shade recommendations, and technique notes."
+  },
+  {
+    "name": "ai-luxury-watch-collection",
+    "color": "violet",
+    "title": "AI Luxury Watch Collection Curator",
+    "description": "Generate luxury watch collection curation and investment analyses",
+    "domain": "luxury
