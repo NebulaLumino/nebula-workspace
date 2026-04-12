@@ -4796,3 +4796,59 @@ After Cycle 120 complete: generate Cycle 121 tasks (3631-3670).
 | 3670 | [ ] | Explore XR Accessibility & Inclusion Design | LOW |
 
 After Cycle 121 complete: generate Cycle 122 tasks (3671-3700).
+
+---
+
+After Cycle 121 complete: generate Cycle 122 tasks (3671-3710).
+
+## 🚀 Cycle 122 (3671-3710) — AI × Science, Research Tools & Laboratory
+
+### HIGH Priority — Science & Research Apps (3671-3700)
+| # | Status | Task | Priority |
+|---|--------|------|----------|
+| 3671 | [ ] | AI Protein Structure Viewer & Analysis Tool | HIGH |
+| 3672 | [ ] | AI CRISPR Guide RNA Designer | HIGH |
+| 3673 | [ ] | AI Chemical Reaction Pathway Optimizer | HIGH |
+| 3674 | [ ] | AI Genomic Sequence Annotation Helper | HIGH |
+| 3675 | [ ] | AI Clinical Trial Design Assistant | HIGH |
+| 3676 | [ ] | AI Electron Microscope Imaging Prep Guide | HIGH |
+| 3677 | [ ] | AI pH Buffer Calculator & Titration Planner | HIGH |
+| 3678 | [ ] | AI Scientific Unit Converter & Dimensional Analyzer | HIGH |
+| 3679 | [ ] | AI Drug-Drug Interaction Checker | HIGH |
+| 3680 | [ ] | AI Microscopy Technique Selector | HIGH |
+| 3681 | [ ] | AI Statistical Power Analysis Calculator | HIGH |
+| 3682 | [ ] | AI Mendelian Randomization Study Designer | HIGH |
+| 3683 | [ ] | AI Materials Safety Data Sheet (SDS) Generator | HIGH |
+| 3684 | [ ] | AI PCR Primer Design Tool | HIGH |
+| 3685 | [ ] | AI Spectroscopy Peak Identifier | HIGH |
+| 3686 | [ ] | AI ELISA Protocol Optimizer | HIGH |
+| 3687 | [ ] | AI Scientific Figure Revision Guide | HIGH |
+| 3688 | [ ] | AI Grant Review Pre-Submission Critique | HIGH |
+| 3689 | [ ] | AI Enzyme Kinetics Parameter Estimator | HIGH |
+| 3690 | [ ] | AI Science Communication Explainer | HIGH |
+| 3691 | [ ] | AI Science Fair Project Planner | HIGH |
+| 3692 | [ ] | AI Research Collaboration Matcher | HIGH |
+| 3693 | [ ] | AI Mathematical Proof Checker & Assistant | HIGH |
+| 3694 | [ ] | AI Astronomy Observation Planner | HIGH |
+| 3695 | [ ] | AI Geology Sample Submission Guide | HIGH |
+| 3696 | [ ] | AI Archaeology Site Survey Planner | HIGH |
+| 3697 | [ ] | AI Neuroscience Brain Atlas Query Tool | HIGH |
+| 3698 | [ ] | AI Science Conference Abstract Builder | HIGH |
+| 3699 | [ ] | AI Research Data Storage & FAIR Principles Advisor | HIGH |
+| 3700 | [ ] | AI Peer Review Scoping: "Is This Paper Novel?" Checker | HIGH |
+
+### LOW Priority — Science Curiosity Docs (3701-3710)
+| # | Status | Task | Priority |
+|---|--------|------|----------|
+| 3701 | [ ] | Explore AlphaFold, Protein Folding & Structural Biology | LOW |
+| 3702 | [ ] | Explore AI in Synthetic Biology & Gene Circuits | LOW |
+| 3703 | [ ] | Explore AI in Particle Physics & LHC Data | LOW |
+| 3704 | [ ] | Explore AI in Neuroscience & Brain Connectomics | LOW |
+| 3705 | [ ] | Explore AI in Drug Discovery & Virtual Screening | LOW |
+| 3706 | [ ] | Explore AI in Quantum Computing & Error Correction | LOW |
+| 3707 | [ ] | Explore AI in Climate Science & Earth System Models | LOW |
+| 3708 | [ ] | Explore AI in Astronomy, Exoplanets & SETI | LOW |
+| 3709 | [ ] | Explore AI in Materials Science & Discovery Automation | LOW |
+| 3710 | [ ] | Explore Open Science, Pre-Registration & Reproducibility | LOW |
+
+After Cycle 122 complete: generate Cycle 123 tasks (3711-3740).
