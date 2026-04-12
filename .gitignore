@@ -51,3 +51,4 @@ Thumbs.db
 *.temp
 *.bak
 # ai-*/ (commented to allow apps to be committed)
+ai-*/.git
