@@ -1673,3 +1673,43 @@
 | 3378 | Calendar Intelligence & Scheduling Optimization | docs/task-3378-calendar-intelligence-scheduling-optimization.md | ✅ |
 | 3379 | Atomic Habits & Behavioral Nudges | docs/task-3379-atomic-habit-behavioral-nudges.md | ✅ |
 | 3380 | Deep Work & Flow State Engineering | docs/task-3380-deep-work-flow-state-engineering.md | ✅ |
+| 3991 | Investment Return Calculator | tasks/task-3991-ai-investment-return-calculator.md | ✅ |
+| 3992 | Portfolio Risk Analyzer | tasks/task-3992-ai-portfolio-risk-analyzer.md | ✅ |
+| 3993 | Debt Payoff Optimizer | tasks/task-3993-ai-debt-payoff-optimizer.md | ✅ |
+| 3994 | Retirement Planning Projector | tasks/task-3994-ai-retirement-planning-projector.md | ✅ |
+| 3995 | Emergency Fund Calculator | tasks/task-3995-ai-emergency-fund-calculator.md | ✅ |
+| 3996 | Tax-Loss Harvesting Advisor | tasks/task-3996-ai-tax-loss-harvesting-advisor.md | ✅ |
+| 3997 | Insurance Coverage Gap Analyzer | tasks/task-3997-ai-insurance-coverage-gap-analyzer.md | ✅ |
+| 3998 | Mortgage Affordability Calculator | tasks/task-3998-ai-mortgage-affordability-calculator.md | ✅ |
+| 3999 | College Cost Planner | tasks/task-3999-ai-college-cost-planner.md | ✅ |
+| 4000 | Net Worth Tracker | tasks/task-4000-ai-net-worth-tracker.md | ✅ |
+| 4001 | Estate Planning Checklist | tasks/task-4001-ai-estate-planning-checklist.md | ✅ |
+| 4002 | Social Security Optimizer | tasks/task-4002-ai-social-security-optimizer.md | ✅ |
+| 4003 | Passive Income Generator | tasks/task-4003-ai-passive-income-generator.md | ✅ |
+| 4004 | Crypto Tax Calculator | tasks/task-4004-ai-crypto-tax-calculator.md | ✅ |
+| 4005 | Compound Interest Visualizer | tasks/task-4005-ai-compound-interest-visualizer.md | ✅ |
+| 4006 | Budget Zero-Based Builder | tasks/task-4006-ai-budget-zero-based-builder.md | ✅ |
+| 4007 | Credit Card Payoff Planner | tasks/task-4007-ai-credit-card-payoff-planner.md | ✅ |
+| 4008 | Real Estate Rental Analyzer | tasks/task-4008-ai-real-estate-rental-analyzer.md | ✅ |
+| 4009 | Charitable Giving Strategy | tasks/task-4009-ai-charitable-giving-strategy.md | ✅ |
+| 4010 | Annuity Comparison Tool | tasks/task-4010-ai-annuity-comparison-tool.md | ✅ |
+| 4011 | Behavioral Finance Coach | tasks/task-4011-ai-behavioral-finance-coach.md | ✅ |
+| 4012 | Small Business Loan Calculator | tasks/task-4012-ai-small-business-loan-calculator.md | ✅ |
+| 4013 | Dividend Growth Tracker | tasks/task-4013-ai-dividend-growth-tracker.md | ✅ |
+| 4014 | FIDIC Income Bracket Optimizer | tasks/task-4014-ai-fidic-income-bracket-optimizer.md | ✅ |
+| 4015 | Conversion Investment Calculator | tasks/task-4015-ai-conversion-investment-calculator.md | ✅ |
+| 4016 | Forex Risk Calculator | tasks/task-4016-ai-forex-risk-calculator.md | ✅ |
+| 4017 | Options Greeks Calculator | tasks/task-4017-ai-options-greeks-calculator.md | ✅ |
+| 4018 | FIRE Number Calculator | tasks/task-4018-ai-fire-number-calculator.md | ✅ |
+| 4019 | Cash Flow Forecast Builder | tasks/task-4019-ai-cash-flow-forecast-builder.md | ✅ |
+| 4020 | High Net Worth Investment Strategy | tasks/task-4020-ai-high-net-worth-investment-strategy.md | ✅ |
+| 4021 | AI Agents in Investment Management | docs/task-4021-ai-agents-investment-management.md | ✅ |
+| 4022 | AI Agents in Insurance Underwriting & Claims | docs/task-4022-ai-agents-insurance-underwriting-claims.md | ✅ |
+| 4023 | AI Agents in Personal Finance & Budgeting | docs/task-4023-ai-agents-personal-finance-budgeting.md | ✅ |
+| 4024 | AI Agents in Tax Preparation & Filing | docs/task-4024-ai-agents-tax-preparation-filing.md | ✅ |
+| 4025 | AI Agents in Cryptocurrency & DeFi | docs/task-4025-ai-agents-cryptocurrency-defi.md | ✅ |
+| 4026 | AI Agents in Banking & Credit Scoring | docs/task-4026-ai-agents-banking-credit-scoring.md | ✅ |
+| 4027 | AI Agents in Robo-Advisory Services | docs/task-4027-ai-agents-robo-advisory-services.md | ✅ |
+| 4028 | AI Agents in Regulatory Compliance | docs/task-4028-ai-agents-regulatory-compliance-finance.md | ✅ |
+| 4029 | AI Agents in Smart Contract Auditing | docs/task-4029-ai-agents-smart-contract-auditing.md | ✅ |
+| 4030 | AI Agents in Real Estate Investment | docs/task-4030-ai-agents-real-estate-investment.md | ✅ |
