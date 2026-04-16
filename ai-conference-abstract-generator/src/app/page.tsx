@@ -25,7 +25,7 @@ export default function Home() {
       <div className='flex-1 flex flex-col items-center justify-center px-6 py-16'>
         <div className='w-full max-w-2xl'>
           <h1 className='text-3xl font-bold mb-2' style={{ color: 'hsl(145,70%,50%)' }}>Conference Abstract Generator</h1>
-          <p className='text-gray-400 mb-8'>AI-powered conference abstract generator. Enter your input below.</p>
+          <p className='text-gray-400 mb-8'>Enter your input below.</p>
           <form onSubmit={handleGenerate} className='space-y-4'>
             <textarea
               value={input}
