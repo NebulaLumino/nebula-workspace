@@ -1775,7 +1775,7 @@
 | 4079 | AI Fantasy League Advisor | tasks/task-4079-ai-fantasy-league-advisor.md | 🆕 |
 | 4080 | AI Sports Broadcast Writer | tasks/task-4080-ai-sports-broadcast-writer.md | 🆕 |
 | 4081 | AI Game Narrative Builder | tasks/task-4081-ai-game-narrative-builder.md | 🆕 |
-| 4082 | AI Board Game Rule Writer | tasks/task-4082-ai-board-game-rule-writer.md | 🆕 |
+| 4082 | AI Language Preservation | tasks/task-4082-ai-language-preservation.md | ✅ Built |
 | 4083 | AI Video Game Reviewer | tasks/task-4083-ai-video-game-reviewer.md | 🆕 |
 | 4084 | AI Tournament Bracket Predictor | tasks/task-4084-ai-tournament-bracket-predictor.md | 🆕 |
 | 4085 | AI Esports Team Composition Advisor | tasks/task-4085-ai-esports-team-composition-advisor.md | 🆕 |
@@ -2235,3 +2235,4 @@
 | 4038 | AI Public Health Campaign Message Tester | teal | NebulaLumino/ai-public-health | [x] |
 | 4039 | AI Disaster Relief Resource Coordinator | red | NebulaLumino/ai-disaster-relief | [x] |
 | 4040 | AI Civics Education & Voter Engagement Tool | yellow | NebulaLumino/ai-civics-tool | [x] |
+ool | [x] |
