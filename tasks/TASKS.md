@@ -5229,4 +5229,59 @@ TASK: ai-personal-brand-wardrobe
 - AI Agents in Fashion Design: AI as Creative Partner
 - AI Agents in Textile Innovation & Smart Fabrics
 
-After Cycle 137 complete: generate Cycle 138 tasks (4301-4340).
+---
+
+## 🚀 Cycle 135 — AI × Mental Health, Psychology & Wellness (4111-4140)
+
+### 🎯 Theme Description
+AI-powered tools for mental health support, psychological well-being, therapy augmentation, emotional regulation, and wellness — spanning CBT, meditation, grief support, addiction recovery, trauma care, and more.
+
+### HIGH Priority — Apps (4111-4120)
+
+| # | Status | Task | App Name |
+|---|--------|------|----------|
+| 4111 | [ ] | AI CBT Thought Reframing Coach | ai-cbt-coach |
+| 4112 | [ ] | AI Anxiety Trigger & Pattern Analyzer | ai-anxiety-tracker |
+| 4113 | [ ] | AI Sleep Hygiene & Bedtime Routine Optimizer | ai-sleep-hygiene |
+| 4114 | [ ] | AI Grief Processing & Support Letter Writer | ai-grief-support |
+| 4115 | [ ] | AI Anger Management & Emotional Regulation Tool | ai-anger-management |
+| 4116 | [ ] | AI Meditation & Mindfulness Session Generator | ai-meditation-sessions |
+| 4117 | [ ] | AI Self-Esteem Journal & Affirmation Builder | ai-self-esteem |
+| 4118 | [ ] | AI Social Anxiety Exposure Scenario Planner | ai-social-anxiety |
+| 4119 | [ ] | AI Burnout Recovery & Work-Life Balance Advisor | ai-burnout-recovery |
+| 4120 | [ ] | AI OCD Compulsion Checker & Rational Responder | ai-ocd-checker |
+
+### MEDIUM Priority — Apps (4121-4130)
+
+| # | Status | Task | App Name |
+|---|--------|------|----------|
+| 4121 | [ ] | AI Dialectical Behavior Therapy Skill Trainer | ai-dbt-skills |
+| 4122 | [ ] | AI Goal Visualization & Motivation Architect | ai-goal-visualization |
+| 4123 | [ ] | AI Social Skills Role-Play Conversation Simulator | ai-social-skills |
+| 4124 | [ ] | AI Addiction Recovery Step Tracker & Sponsor Matcher | ai-addiction-recovery |
+| 4125 | [ ] | AI Body Dysmorphia Support Coping Card Generator | ai-body-dysmorphia |
+| 4126 | [ ] | AI Postpartum Mental Health Check-In & Resource Finder | ai-postpartum |
+| 4127 | [ ] | AI Test Anxiety Performance Coach | ai-test-anxiety |
+| 4128 | [ ] | AI Phobia Desensitization Script Generator | ai-phobia-desensitization |
+| 4129 | [ ] | AI Chronic Pain Psychological Coping Advisor | ai-chronic-pain |
+| 4130 | [ ] | AI PTSD Grounding Technique & Safety Plan Builder | ai-ptsd-safety |
+
+### LOW Priority — Curiosity Docs (4131-4140)
+
+| # | Status | Task | Docs |
+|---|--------|------|------|
+| 4131 | [ ] | Explore AI in Mental Health: Therapy Bots, Crisis Lines & Digital Therapeutics | docs/task-4131-ai-mental-health.md |
+| 4132 | [ ] | Explore AI in Psychology: Personality Theory, Assessment & Research | docs/task-4132-ai-psychology.md |
+| 4133 | [ ] | Explore AI in Neuroscience: Brain Imaging, fMRI & Cognitive Mapping | docs/task-4133-ai-neuroscience.md |
+| 4134 | [ ] | Explore AI in Psychiatry: Diagnosis, Medication & Treatment Planning | docs/task-4134-ai-psychiatry.md |
+| 4135 | [ ] | Explore AI in Addiction Science: Behavioral Addictions, Recovery & Harm Reduction | docs/task-4135-ai-addiction-science.md |
+| 4136 | [ ] | Explore AI in Sleep Science: Circadian Rhythms, Insomnia & Dream Analysis | docs/task-4136-ai-sleep-science.md |
+| 4137 | [ ] | Explore AI in Child Development: Autism, ADHD & Early Intervention | docs/task-4137-ai-child-development.md |
+| 4138 | [ ] | Explore AI in Geriatric Mental Health: Dementia, Loneliness & Care | docs/task-4138-ai-geriatric-mental-health.md |
+| 4139 | [ ] | Explore AI in Social Psychology: Persuasion, Group Dynamics & Prejudice | docs/task-4139-ai-social-psychology.md |
+| 4140 | [ ] | Explore AI in Positive Psychology: Flow, Meaning, Gratitude & Well-Being | docs/task-4140-ai-positive-psychology.md |
+
+
+---
+
+After Cycle 135 complete: generate Cycle 136 tasks (4141-4170).
