@@ -2143,3 +2143,41 @@
 | 3750 | Explore AI in Nursing: Shift Planning & Clinical Decision Support | docs/task-3750-ai-nursing-clinical-support.md | ✅ |
 
 <!-- After Cycle 123 complete: generate Cycle 124 tasks (3760-3799). -->
+
+---
+
+## 🚀 Cycle 130 (3961–3970) — AI × Science & Research
+
+| # | App | Accent | GitHub | Status |
+|---|-----|--------|--------|--------|
+| 3961 | AI Scientific Paper Literature Review Generator | rose | NebulaLumino/ai-literature-review | ✅ |
+| 3962 | AI Hypothesis Generator & Research Gap Finder | orange | NebulaLumino/ai-hypothesis-generator | ✅ |
+| 3963 | AI Lab Protocol Safety Checker | lime | NebulaLumino/ai-lab-safety-checker | ✅ |
+| 3964 | AI Clinical Trial Design Assistant | emerald | NebulaLumino/ai-clinical-trial-design | ✅ |
+| 3965 | AI Drug Interaction Checker | aqua | NebulaLumino/ai-drug-interaction | ✅ |
+| 3966 | AI Genomic Sequence Annotation Helper | sky | NebulaLumino/ai-genomic-annotation | ✅ |
+| 3967 | AI Materials Science Compound Explorer | indigo | NebulaLumino/ai-materials-explorer | ✅ |
+| 3968 | AI Astrophysics Data Pattern Finder | violet | NebulaLumino/ai-astrophysics-pattern | ✅ |
+| 3969 | AI Chemistry Reaction Yield Optimizer | pink | NebulaLumino/ai-reaction-optimizer | ✅ |
+| 3970 | AI Research Data Visualization Suggestion Engine | orange | NebulaLumino/ai-data-viz-suggestions | ✅ |
+
+<!-- After Cycle 130 complete: generate Cycle 131 tasks. -->
+
+---
+
+## 🚀 Cycle 130 — Extended (3971–3980) — AI × Science & Research
+
+| # | App | Accent | GitHub | Status |
+|---|-----|--------|--------|--------|
+| 3971 | AI Grant Proposal Score Predictor | violet | NebulaLumino/ai-grant-proposal | ✅ |
+| 3972 | AI Scientific Abstract & Keyword Extractor | violet | NebulaLumino/ai-abstract-extractor | ✅ |
+| 3973 | AI Peer Review Essay & Methodology Critic | violet | NebulaLumino/ai-peer-review-critic | ✅ |
+| 3974 | AI Lab Equipment Calibration Scheduler | violet | NebulaLumino/ai-lab-calibration | ✅ |
+| 3975 | AI Chemical SDS Safety Summary Generator | amber | NebulaLumino/ai-sds-generator | ✅ |
+| 3976 | AI Research Collaboration Matcher | violet | NebulaLumino/ai-collaboration-matcher | ✅ |
+| 3977 | AI Experiment Replication Difficulty Assessor | violet | NebulaLumino/ai-replication-assessor | ✅ |
+| 3978 | AI Science Communication Explainer | violet | NebulaLumino/ai-science-comm | ✅ |
+| 3979 | AI Patent Landscape Analysis | violet | NebulaLumino/ai-patent-landscape | ✅ |
+| 3980 | AI Academic Citation Graph Visualizer | violet | NebulaLumino/ai-citation-graph | ✅ |
+
+<!-- After Cycle 130 Extended complete: generate Cycle 131 tasks. -->
