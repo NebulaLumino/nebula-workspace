@@ -1,145 +1,80 @@
 "use client";
+import { useState } from 'react';
 
-import { useState } from "react";
+const ACCENT = 'text-blue-400';
 
-function renderMarkdown(text: string) {
-  return text.split("\n").map((line, i) => {
-    const trimmed = line.trim();
-    if (trimmed.startsWith("## ")) return <h2 key={i} className="text-xl font-bold text-white mt-7 mb-3 col-span-full">{trimmed.replace("## ","")}</h2>;
-    if (trimmed.startsWith("### ")) return <h3 key={i} className="text-sm font-bold text-amber-300 mt-4 mb-2">{trimmed.replace("### ","")}</h3>;
-    if (trimmed.startsWith("**") && !trimmed.includes("\n")) return <p key={i} className="text-amber-200 font-semibold text-xs mt-2 mb-0.5">{trimmed.replace(/\*\*/g,"")}</p>;
-    if (trimmed.startsWith("- ")) return <li key={i} className="text-slate-300 text-xs ml-4 mb-0.5 list-disc">{trimmed.replace("- ","")}</li>;
-    if (/^\d+\.\s/.test(trimmed)) return <li key={i} className="text-slate-300 text-xs ml-4 mb-0.5">{trimmed}</li>;
-    if (trimmed === "") return <div key={i} className="h-1.5" />;
-    return <p key={i} className="text-slate-300 text-xs leading-relaxed mb-0.5">{trimmed}</p>;
-  });
-}
-
-export default function Home() {
-  const [company, setCompany] = useState("");
-  const [quarter, setQuarter] = useState("");
-  const [department, setDepartment] = useState("");
-  const [companyGoals, setCompanyGoals] = useState("");
-  const [teamSize, setTeamSize] = useState("");
-  const [industry, setIndustry] = useState("");
-  const [result, setResult] = useState("");
+export default function AIOkrTracker() {
+  const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [done, setDone] = useState(false);
+  const [result, setResult] = useState('');
 
-  const generate = async () => {
-    if (!company.trim()) { setError("Company name is required."); return; }
+  const handleGenerate = async () => {
+    if (!input.trim()) return;
     setLoading(true);
-    setError("");
-    setResult("");
-    setDone(false);
+    setResult('');
     try {
-      const res = await fetch("/api/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ company, quarter, department, companyGoals, teamSize, industry }),
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: input }),
       });
       const data = await res.json();
-      if (!res.ok) { setError(data.error || "Generation failed."); return; }
-      setResult(data.result);
-      setDone(true);
-    } catch { setError("Failed to connect."); }
-    finally { setLoading(false); }
+      setResult(data.output || data.error || '');
+    } catch {
+      setResult('Error generating OKRs. Please try again.');
+    }
+    setLoading(false);
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-lime-950">
-      <header className="border-b border-white/10 sticky top-0 z-10 bg-slate-950/80 backdrop-blur">
-        <div className="max-w-4xl mx-auto px-6 py-5 flex items-center gap-3">
-          <span className="text-3xl">🎯</span>
-          <div>
-            <h1 className="text-xl font-bold text-white">AI OKR Tracker & Generator</h1>
-            <p className="text-xs text-slate-400">Strategy · OKRs · DeepSeek</p>
-          </div>
+    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900 text-white flex flex-col">
+      <div className="border-b border-blue-900/30 px-8 py-5 flex items-center gap-3">
+        <div className={`${ACCENT} text-2xl`}>🎯</div>
+        <div>
+          <h1 className="text-xl font-bold text-white">AI OKR Tracker</h1>
+          <p className="text-sm text-gray-400">Set, align, and monitor goals with AI-powered insights</p>
         </div>
-      </header>
+      </div>
 
-      <div className="max-w-4xl mx-auto px-6 py-10 space-y-6">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-white">Set OKRs That Your Team Will Actually Achieve 🎯</h2>
-          <p className="text-slate-400 text-sm max-w-md mx-auto mt-1">Generate complete OKR packages: company and department objectives, measurable key results, grading rubric, check-in templates, and scorecard.</p>
-        </div>
-
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-5">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div>
-              <label className="text-white font-semibold text-sm block mb-2">🏢 Company Name *</label>
-              <input value={company} onChange={(e) => setCompany(e.target.value)} placeholder="e.g. NovaTask Inc., CloudSync Corp"
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-lime-400" />
-            </div>
-            <div>
-              <label className="text-white font-semibold text-sm block mb-2">📅 Quarter</label>
-              <select value={quarter} onChange={(e) => setQuarter(e.target.value)}
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-lime-400">
-                <option value="" className="bg-slate-800">Select quarter...</option>
-                <option value="Q1 2026" className="bg-slate-800">Q1 2026</option>
-                <option value="Q2 2026" className="bg-slate-800">Q2 2026</option>
-                <option value="Q3 2026" className="bg-slate-800">Q3 2026</option>
-                <option value="Q4 2026" className="bg-slate-800">Q4 2026</option>
-              </select>
-            </div>
-            <div>
-              <label className="text-white font-semibold text-sm block mb-2">🏗️ Department</label>
-              <select value={department} onChange={(e) => setDepartment(e.target.value)}
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-lime-400">
-                <option value="" className="bg-slate-800">Company-wide</option>
-                <option value="Engineering" className="bg-slate-800">Engineering</option>
-                <option value="Sales" className="bg-slate-800">Sales</option>
-                <option value="Marketing" className="bg-slate-800">Marketing</option>
-                <option value="Product" className="bg-slate-800">Product</option>
-                <option value="Customer Success" className="bg-slate-800">Customer Success</option>
-                <option value="All Departments" className="bg-slate-800">All Departments</option>
-              </select>
-            </div>
-            <div>
-              <label className="text-white font-semibold text-sm block mb-2">👥 Team Size</label>
-              <input value={teamSize} onChange={(e) => setTeamSize(e.target.value)} placeholder="e.g. 50-person company, 10-person team"
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-lime-400" />
-            </div>
-            <div>
-              <label className="text-white font-semibold text-sm block mb-2">🏭 Industry</label>
-              <input value={industry} onChange={(e) => setIndustry(e.target.value)} placeholder="e.g. SaaS, FinTech, E-commerce"
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-lime-400" />
-            </div>
-            <div>
-              <label className="text-white font-semibold text-sm block mb-2">🏁 Company Goals</label>
-              <input value={companyGoals} onChange={(e) => setCompanyGoals(e.target.value)} placeholder="e.g. Revenue growth, customer success, team scaling"
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-lime-400" />
-            </div>
-          </div>
-
-          <button onClick={generate} disabled={loading}
-            className="w-full py-4 rounded-xl bg-gradient-to-r from-lime-600 to-green-600 hover:from-lime-500 hover:to-green-500 disabled:opacity-50 text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
-            {loading ? <><span className="animate-spin text-xl">⚙️</span> Building OKRs...</> : <><span>🎯</span> Generate OKRs</>}
+      <div className="flex-1 max-w-4xl mx-auto w-full px-6 py-10 flex flex-col gap-6">
+        <div className="bg-gray-800/50 border border-gray-700/50 rounded-2xl p-6 space-y-4">
+          <label className={`block text-sm font-semibold ${ACCENT}`}>Describe Your Objectives & Context</label>
+          <textarea
+            className="w-full bg-gray-900 border border-gray-700 rounded-xl p-4 text-sm text-gray-100 placeholder-gray-500 resize-y min-h-48 focus:outline-none focus:border-blue-500 transition-colors"
+            placeholder="Describe your company, team, or personal objectives and key results you want to track. Include any context about current goals, challenges, or priorities. The AI will generate structured OKRs with measurable key results..."
+            value={input}
+            onChange={e => setInput(e.target.value)}
+          />
+          <button
+            onClick={handleGenerate}
+            disabled={loading || !input.trim()}
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-500 disabled:bg-gray-700 disabled:text-gray-500 rounded-xl font-semibold text-sm transition-colors"
+          >
+            {loading ? 'Generating OKRs...' : 'Generate OKRs'}
           </button>
         </div>
 
-        {error && <div className="bg-red-500/20 border border-red-500/40 rounded-xl px-5 py-3 text-red-300 text-sm">{error}</div>}
-
-        {done && result && (
-          <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
-            <div className="flex items-center justify-between px-5 py-4 bg-lime-500/10 border-b border-lime-500/20">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🎯</span>
-                <p className="text-lime-300 font-bold text-sm">OKRs: {company} {quarter || ""}</p>
-              </div>
-              <button onClick={() => navigator.clipboard?.writeText(result)}
-                className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 text-xs border border-white/10 transition-all">
-                📋 Copy All
-              </button>
-            </div>
-            <div className="px-6 py-5">
-              {renderMarkdown(result)}
-            </div>
+        {result && (
+          <div className="bg-gray-800/50 border border-gray-700/50 rounded-2xl p-6 space-y-4">
+            <h2 className={`text-sm font-semibold ${ACCENT}`}>AI-Generated OKRs</h2>
+            <div className="text-sm text-gray-200 whitespace-pre-wrap leading-relaxed">{result}</div>
           </div>
         )}
 
-        <p className="text-center text-xs text-slate-600">AI OKR Tracker · {new Date().getFullYear()} · DeepSeek</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            { icon: '📊', title: 'OKR Creation Wizard', desc: 'Structured objectives with measurable key results' },
+            { icon: '🔮', title: 'Progress Forecasting', desc: 'AI-predicted completion likelihood' },
+            { icon: '⚠️', title: 'Risk Detection', desc: 'At-risk OKR alerts with remediation tips' },
+            { icon: '📈', title: 'Weekly Check-ins', desc: 'Guided progress update prompts' },
+          ].map(({ icon, title, desc }) => (
+            <div key={title} className="bg-gray-800/30 border border-gray-700/40 rounded-xl p-4">
+              <div className="text-2xl mb-2">{icon}</div>
+              <div className="text-sm font-semibold text-gray-100">{title}</div>
+              <div className="text-xs text-gray-400 mt-1">{desc}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );

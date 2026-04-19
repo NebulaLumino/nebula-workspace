@@ -1,65 +1,96 @@
-import Image from "next/image";
+'use client';
+import { useState } from 'react';
 
 export default function Home() {
+  const [mood, setMood] = useState('');
+  const [genre, setGenre] = useState('Electronic');
+  const [instruments, setInstruments] = useState('Synthesizers, Drums');
+  const [tempo, setTempo] = useState('120 BPM');
+  const [duration, setDuration] = useState('3-4 minutes');
+  const [output, setOutput] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  async function handleGenerate(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setOutput('');
+    try {
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ mood, genre, instruments, tempo, duration }),
+      });
+      const data = await res.json();
+      setOutput(data.result || data.error || 'No response generated.');
+    } catch (e: any) {
+      setOutput('Error: ' + e.message);
+    }
+    setLoading(false);
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-white font-sans">
+      <div className="max-w-3xl mx-auto px-6 py-16">
+        <header className="mb-12 text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-purple-500/20 border border-purple-500/30 mb-6">
+            <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+            </svg>
+          </div>
+          <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            AI Music Composer
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+          <p className="text-gray-400 text-lg">Generate melodies, chord progressions & full composition plans</p>
+        </header>
+
+        <form onSubmit={handleGenerate} className="space-y-5 mb-8">
+          <div>
+            <label className="block text-sm font-medium text-gray-300 mb-2">Mood / Emotion</label>
+            <input value={mood} onChange={e => setMood(e.target.value)} placeholder="e.g. Uplifting, Melancholic, Energetic" required
+              className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors" />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Genre</label>
+              <select value={genre} onChange={e => setGenre(e.target.value)}
+                className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors">
+                {['Electronic', 'Ambient', 'Classical', 'Jazz', 'Rock', 'Pop', 'Hip-Hop', 'Cinematic', 'Lo-fi', 'Funk', 'R&B', 'Experimental'].map(g => <option key={g} value={g}>{g}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Tempo</label>
+              <input value={tempo} onChange={e => setTempo(e.target.value)} placeholder="e.g. 120 BPM"
+                className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors" />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Instruments</label>
+              <input value={instruments} onChange={e => setInstruments(e.target.value)} placeholder="e.g. Synths, Drums, Bass"
+                className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Duration</label>
+              <input value={duration} onChange={e => setDuration(e.target.value)} placeholder="e.g. 3-4 minutes"
+                className="w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors" />
+            </div>
+          </div>
+
+          <button type="submit" disabled={loading}
+            className="w-full py-4 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all transform hover:scale-[1.01] active:scale-[0.99]">
+            {loading ? '🎵 Composing...' : '🎵 Compose Music'}
+          </button>
+        </form>
+
+        {output && (
+          <div className="bg-gray-800/40 border border-gray-700 rounded-2xl p-6">
+            <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wide mb-3">Composition</h3>
+            <pre className="text-gray-300 text-sm whitespace-pre-wrap font-mono leading-relaxed">{output}</pre>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
